@@ -6,22 +6,43 @@ export default function Home() {
     {
       title: 'Peta Desa',
       description: 'Lihat peta interaktif Desa Minanga Dua dengan berbagai landmark penting',
-      icon: '🗺️',
+      icon: 'map',
       href: '/peta',
     },
     {
       title: 'Sejarah Desa',
       description: 'Pelajari tentang asal-usul dan sejarah perkembangan Desa Minanga Dua',
-      icon: '📖',
+      icon: 'book',
       href: '/sejarah',
     },
     {
       title: 'Profil Desa',
       description: 'Informasi lengkap tentang demografi, geografis, dan potensi desa',
-      icon: '📊',
+      icon: 'chart',
       href: '/profil',
     },
   ];
+
+  const IconMap = ({ type }: { type: string }) => {
+    const icons: Record<string, React.ReactNode> = {
+      map: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+        </svg>
+      ),
+      book: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      ),
+      chart: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+      ),
+    };
+    return icons[type] || null;
+  };
 
   return (
     <div>
@@ -50,7 +71,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <div className="inline-block mb-6 animate-fade-in-down">
-              <span className="bg-white/20 text-white px-6 py-2 rounded-full text-sm font-semibold border border-white/30 backdrop-blur-sm shadow-lg animate-pulse-slow">🏝️ Desa Pesisir Sulawesi Utara</span>
+              <span className="bg-white/20 text-white px-6 py-2 rounded-full text-sm font-semibold border border-white/30 backdrop-blur-sm shadow-lg animate-pulse-slow flex items-center gap-2">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Desa Pesisir Sulawesi Utara
+              </span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white drop-shadow-lg animate-fade-in-up">
               Selamat Datang di<br/>
@@ -65,7 +89,8 @@ export default function Home() {
                 className="group inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-bold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
               >
                 <span className="flex items-center gap-2 justify-center">
-                  🗺️ Jelajahi Peta
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+                  Jelajahi Peta
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </span>
               </Link>
@@ -74,7 +99,8 @@ export default function Home() {
                 className="group inline-block bg-white/20 backdrop-blur-md text-white px-8 py-4 rounded-xl font-bold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 border-2 border-white/50 shadow-xl hover:shadow-2xl"
               >
                 <span className="flex items-center gap-2 justify-center">
-                  📊 Pelajari Profil Desa
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                  Pelajari Profil Desa
                 </span>
               </Link>
             </div>
@@ -111,7 +137,9 @@ export default function Home() {
                   <div className={`relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 h-full transform hover:scale-105 hover:-translate-y-2 cursor-pointer border-2 ${style.border} overflow-hidden card-hover`}>
                     <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${style.bg} opacity-10 rounded-bl-full group-hover:opacity-20 transition-opacity`}></div>
                     <div className="relative z-10">
-                      <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform animate-float">{feature.icon}</div>
+                      <div className={`w-16 h-16 mb-4 rounded-2xl bg-gradient-to-br ${style.bg} flex items-center justify-center text-white transform group-hover:scale-110 transition-transform shadow-lg`}>
+                        <IconMap type={feature.icon} />
+                      </div>
                       <h3 className={`text-2xl font-bold mb-3 bg-gradient-to-r ${style.bg} bg-clip-text text-transparent`}>
                         {feature.title}
                       </h3>
@@ -173,28 +201,36 @@ export default function Home() {
               <div className="bg-white rounded-2xl p-6 shadow-xl border-2 border-gray-100">
               <div className="space-y-4">
                 <div className="flex items-center space-x-4 bg-gradient-to-r from-teal-500 to-cyan-600 text-white rounded-xl p-4 hover:from-teal-600 hover:to-cyan-700 transition-all transform hover:scale-105 shadow-md">
-                  <div className="text-4xl">👥</div>
+                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                  </div>
                   <div>
                     <p className="font-bold text-xl">671 Jiwa</p>
                     <p className="text-sm opacity-90">Total Penduduk</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4 bg-gradient-to-r from-orange-500 to-amber-600 text-white rounded-xl p-4 hover:from-orange-600 hover:to-amber-700 transition-all transform hover:scale-105 shadow-md">
-                  <div className="text-4xl">📍</div>
+                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  </div>
                   <div>
                     <p className="font-bold text-xl">1,47 km²</p>
                     <p className="text-sm opacity-90">Luas Wilayah</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl p-4 hover:from-blue-600 hover:to-indigo-700 transition-all transform hover:scale-105 shadow-md">
-                  <div className="text-4xl">🌊</div>
+                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21 16.92V19a2 2 0 01-2 2H5a2 2 0 01-2-2v-2.08c0-.41.25-.78.63-.93L12 12l8.37 3.99c.38.15.63.52.63.93zM12 2L3.63 5.99A1 1 0 003 6.92V9c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V6.92a1 1 0 00-.63-.93L12 2z"/></svg>
+                  </div>
                   <div>
                     <p className="font-bold text-xl">Desa Pesisir</p>
                     <p className="text-sm opacity-90">Lokasi Geografis</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl p-4 hover:from-green-600 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-md">
-                  <div className="text-4xl">🌳</div>
+                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+                  </div>
                   <div>
                     <p className="font-bold text-xl">Ekosistem Mangrove</p>
                     <p className="text-sm opacity-90">Potensi Alam</p>
@@ -239,7 +275,8 @@ export default function Home() {
               className="group inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-3 rounded-xl font-bold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
             >
               <span className="flex items-center gap-2 justify-center">
-                📖 Baca Sejarah Desa
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                Baca Sejarah Desa
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </span>
             </Link>
@@ -248,7 +285,8 @@ export default function Home() {
               className="group inline-block bg-white/20 backdrop-blur-md text-white px-8 py-3 rounded-xl font-bold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 border-2 border-white/50 shadow-xl hover:shadow-2xl"
             >
               <span className="flex items-center gap-2 justify-center">
-                🗺️ Lihat Peta Desa
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+                Lihat Peta Desa
               </span>
             </Link>
           </div>

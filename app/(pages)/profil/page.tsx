@@ -27,34 +27,46 @@ export default function ProfilPage() {
     {
       title: 'Potensi Tanah',
       description: 'Areal tanah yang subur cocok untuk berbagai jenis tanaman yang dapat mendorong perekonomian desa ke tingkat yang lebih baik.',
-      icon: '🌾',
+      icon: 'tanah',
     },
     {
       title: 'Potensi Peternakan',
       description: 'Sektor peternakan dengan fokus pada ternak babi, sapi, dan ayam. Kawasan ini melimpah dengan sumber cadangan makanan ternak.',
-      icon: '🐄',
+      icon: 'ternak',
     },
     {
       title: 'Potensi Penduduk',
       description: 'Jumlah penduduk yang besar merupakan sumber cadangan tenaga kerja yang luar biasa untuk pengembangan ekonomi lokal.',
-      icon: '👥',
+      icon: 'penduduk',
     },
     {
       title: 'Potensi Transportasi',
       description: 'Sarana transportasi yang sudah mencukupi dari segi jalan, angkutan, dan sumber daya manusia yang memadai.',
-      icon: '🚗',
+      icon: 'transport',
     },
     {
       title: 'Potensi Perumahan',
       description: 'Banyaknya rumah yang layak tinggal menunjukkan infrastruktur dasar yang sudah tertanam dengan baik di desa ini.',
-      icon: '🏠',
+      icon: 'rumah',
     },
     {
       title: 'Potensi Alam',
       description: 'Sebagai desa pesisir, Minanga Dua memiliki ekosistem mangrove yang signifikan sebagai aset sumber daya alam yang berharga.',
-      icon: '🌳',
+      icon: 'alam',
     },
   ];
+
+  const PotensiIcon = ({ type }: { type: string }) => {
+    const icons: Record<string, React.ReactNode> = {
+      tanah: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9zM5.6 10.25c0 1.38 1.12 2.5 2.5 2.5.53 0 1.01-.16 1.42-.44l-.02.19c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5l-.02-.19c.4.28.89.44 1.42.44 1.38 0 2.5-1.12 2.5-2.5 0-1-.59-1.85-1.43-2.25.84-.4 1.43-1.25 1.43-2.25 0-1.38-1.12-2.5-2.5-2.5-.53 0-1.01.16-1.42.44l.02-.19C14.5 2.12 13.38 1 12 1S9.5 2.12 9.5 3.5l.02.19c-.4-.28-.89-.44-1.42-.44-1.38 0-2.5 1.12-2.5 2.5 0 1 .59 1.85 1.43 2.25-.84.4-1.43 1.25-1.43 2.25zM12 5.5c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5S9.5 9.38 9.5 8s1.12-2.5 2.5-2.5zM3 13c0 4.97 4.03 9 9 9 0-4.97-4.03-9-9-9z"/></svg>,
+      ternak: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M10.5 12H8v-2h2.5V12zm5 0H13v-2h2.5V12zM19 3H5c-1.11 0-2 .89-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.11-.89-2-2-2zm-7 3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm5.5 11c-.42 0-.82-.09-1.19-.25-.21.16-.46.25-.72.25-.55 0-1.05-.22-1.41-.59-.36.37-.86.59-1.41.59-.56 0-1.05-.22-1.41-.59-.37.37-.86.59-1.41.59-.27 0-.52-.09-.73-.25-.37.16-.77.25-1.19.25-1.66 0-3-1.34-3-3 0-.23.03-.46.08-.68-.03-.01-.05-.01-.08-.01 0-1.1.9-2 2-2h1.5V9h5v2.31H16c1.1 0 2 .9 2 2-.03 0-.05 0-.08.01.05.22.08.45.08.68 0 1.66-1.34 3-3 3z"/></svg>,
+      penduduk: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>,
+      transport: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>,
+      rumah: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>,
+      alam: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>,
+    };
+    return icons[type] || <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>;
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -78,7 +90,10 @@ export default function ProfilPage() {
         }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="inline-block mb-4 animate-fade-in-down">
-            <span className="bg-white/20 text-white px-6 py-2 rounded-full text-sm font-semibold border border-white/30 backdrop-blur-sm shadow-lg">📊 Data & Statistik</span>
+            <span className="bg-white/20 text-white px-6 py-2 rounded-full text-sm font-semibold border border-white/30 backdrop-blur-sm shadow-lg flex items-center gap-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+              Data & Statistik
+            </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg animate-fade-in-up">Profil Desa Minanga Dua</h1>
           <p className="text-white/90 text-lg drop-shadow-md animate-fade-in-up animation-delay-200">Informasi lengkap tentang desa kami</p>
@@ -93,7 +108,10 @@ export default function ProfilPage() {
             <div className="relative bg-white rounded-2xl shadow-lg p-8 border-l-4 border-teal-600 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group animate-fade-in-left">
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-teal-200/20 to-transparent rounded-bl-full group-hover:scale-110 transition-transform"></div>
               <h2 className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent mb-6 flex items-center gap-2 relative z-10">
-                <span className="text-3xl animate-float">📍</span> Lokasi & Administrasi
+                <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white shadow-md animate-float">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </span>
+                Lokasi & Administrasi
               </h2>
               <div className="space-y-4 relative z-10">
                 <div className="bg-gradient-to-r from-teal-50 to-cyan-50 p-4 rounded-lg hover:from-teal-100 hover:to-cyan-100 transition-all transform hover:scale-105 border border-teal-100">
@@ -119,7 +137,10 @@ export default function ProfilPage() {
             <div className="relative bg-white rounded-2xl shadow-lg p-8 border-l-4 border-orange-600 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group animate-fade-in-right">
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-orange-200/20 to-transparent rounded-bl-full group-hover:scale-110 transition-transform"></div>
               <h2 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent mb-6 flex items-center gap-2 relative z-10">
-                <span className="text-3xl animate-wave">🌊</span> Geografis & Wilayah
+                <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-white shadow-md animate-wave">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M21 16.92V19a2 2 0 01-2 2H5a2 2 0 01-2-2v-2.08c0-.41.25-.78.63-.93L12 12l8.37 3.99c.38.15.63.52.63.93z"/><path d="M12 2L3.63 5.99A1 1 0 003 6.92V9c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V6.92a1 1 0 00-.63-.93L12 2z"/></svg>
+                </span>
+                Geografis & Wilayah
               </h2>
               <div className="space-y-4 relative z-10">
                 <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-4 rounded-lg hover:from-orange-100 hover:to-amber-100 transition-all transform hover:scale-105 border border-orange-100">
@@ -147,14 +168,22 @@ export default function ProfilPage() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-cyan-200/20 to-transparent rounded-full filter blur-3xl animate-pulse-slow"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-orange-200/20 to-transparent rounded-full filter blur-3xl animate-pulse-slow"></div>
             <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent mb-8 flex items-center gap-2 relative z-10">
-              <span className="text-3xl animate-float">👥</span> Demografi Penduduk
+              <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white shadow-md animate-float">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+              </span>
+              Demografi Penduduk
             </h2>
 
             {/* Total Penduduk */}
             <div className="mb-8 p-8 bg-gradient-to-br from-teal-500 via-cyan-600 to-blue-600 rounded-2xl shadow-xl border-2 border-cyan-300 relative z-10 overflow-hidden group hover:scale-105 transition-transform">
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5"></div>
               <div className="absolute top-0 left-0 w-32 h-32 bg-white/20 rounded-full filter blur-2xl"></div>
-              <p className="text-center text-5xl font-bold text-white relative z-10 drop-shadow-lg">👥 671 Jiwa</p>
+              <div className="flex items-center justify-center gap-3">
+                <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center">
+                  <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                </div>
+                <p className="text-center text-5xl font-bold text-white relative z-10 drop-shadow-lg">671 Jiwa</p>
+              </div>
               <p className="text-center text-white/90 font-semibold mt-2 relative z-10 drop-shadow-md">Total Penduduk Desa Minanga Dua</p>
             </div>
 
@@ -208,11 +237,17 @@ export default function ProfilPage() {
           <div className="relative bg-white rounded-2xl shadow-lg p-8 mb-16 border-l-4 border-cyan-600 overflow-hidden hover:shadow-2xl transition-all group animate-fade-in-up animation-delay-100">
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-cyan-200/20 to-transparent rounded-bl-full group-hover:scale-110 transition-transform"></div>
             <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent mb-6 flex items-center gap-2 relative z-10">
-              <span className="text-3xl animate-bounce-in">🎓</span> Fasilitas Pendidikan
+              <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-md animate-bounce-in">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+              </span>
+              Fasilitas Pendidikan
             </h2>
             <div className="relative bg-gradient-to-br from-cyan-50 via-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-cyan-200 shadow-md hover:shadow-lg transition-shadow z-10">
               <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-700 to-blue-700 bg-clip-text text-transparent mb-3 flex items-center gap-2">
-                <span className="text-2xl">🏫</span> SD GMIM 362 Minanga
+                <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-sm">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/></svg>
+                </span>
+                SD GMIM 362 Minanga
               </h3>
               <div className="space-y-2 text-gray-700">
                 <p><span className="font-bold text-cyan-700">Lokasi:</span> Minanga Dua, Jaga 1</p>
@@ -227,7 +262,10 @@ export default function ProfilPage() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-orange-300/20 to-transparent rounded-full filter blur-3xl animate-float"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-amber-300/20 to-transparent rounded-full filter blur-3xl animate-pulse-slow"></div>
             <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent mb-4 flex items-center gap-2 relative z-10">
-              <span className="text-3xl animate-glow">💡</span> Potensi Desa
+              <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-white shadow-md animate-glow">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/></svg>
+              </span>
+              Potensi Desa
             </h2>
             <p className="text-gray-700 text-lg mb-8 leading-relaxed relative z-10 font-medium">
               Desa Minanga Dua memiliki berbagai potensi yang beragam. Meskipun desa ini tergolong tertinggal dibandingkan dengan desa lain di Kecamatan Pusomaen, 
@@ -253,7 +291,9 @@ export default function ProfilPage() {
                   >
                     <div className="p-6 flex items-center justify-between transition-colors">
                       <div className="flex items-center gap-4">
-                        <span className="text-4xl transform hover:scale-110 transition-transform">{item.icon}</span>
+                        <span className={`w-12 h-12 rounded-xl bg-gradient-to-br ${style.title} flex items-center justify-center text-white shadow-md transform hover:scale-110 transition-transform`}>
+                          <PotensiIcon type={item.icon} />
+                        </span>
                         <h3 className={`text-xl font-bold bg-gradient-to-r ${style.title} bg-clip-text text-transparent`}>{item.title}</h3>
                       </div>
                       <span className={`text-2xl transition-transform duration-300 ${expandedPotential === item.title ? 'rotate-180' : ''}`}>
@@ -283,7 +323,10 @@ export default function ProfilPage() {
             }}></div>
             <div className="relative z-10">
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-2 drop-shadow-lg">
-                <span className="text-3xl">🏗️</span> Pembangunan & Tata Kelola
+                <span className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16c0 1.11.89 2 2 2h12c1.11 0 2-.89 2-2V8l-6-6H6z"/></svg>
+                </span>
+                Pembangunan & Tata Kelola
               </h2>
               <p className="text-white/90 text-lg leading-relaxed drop-shadow-md font-medium">
                 Pemerintah Desa Minanga Dua aktif dalam merealisasikan program-program pembangunan yang bermanfaat bagi masyarakat. 

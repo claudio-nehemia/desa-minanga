@@ -24,7 +24,10 @@ export default function SejarahPage() {
         }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="inline-block mb-4 animate-fade-in-down">
-            <span className="bg-white/20 text-white px-6 py-2 rounded-full text-sm font-semibold border border-white/30 backdrop-blur-sm shadow-lg">📖 Sejarah & Budaya</span>
+            <span className="bg-white/20 text-white px-6 py-2 rounded-full text-sm font-semibold border border-white/30 backdrop-blur-sm shadow-lg flex items-center gap-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+              Sejarah & Budaya
+            </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg animate-fade-in-up">Sejarah Desa Minanga Dua</h1>
           <p className="text-white/90 text-lg animate-fade-in-up animation-delay-200">Menelusuri asal-usul dan perkembangan desa kami</p>
@@ -39,7 +42,9 @@ export default function SejarahPage() {
             <div className="relative bg-white rounded-2xl shadow-lg p-8 border-l-4 border-teal-600 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden animate-fade-in-up">
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-teal-200/20 to-transparent rounded-bl-full"></div>
               <div className="flex items-start gap-4 mb-6 relative z-10">
-                <div className="text-5xl animate-float">🏝️</div>
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white shadow-lg animate-float">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">Asal-Usul Nama "Minanga"</h2>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed mb-4">
@@ -86,7 +91,9 @@ export default function SejarahPage() {
             <div className="relative bg-gradient-to-br from-white via-cream-50 to-white rounded-2xl shadow-xl p-8 border-l-4 border-brown-700 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden animate-fade-in-up animation-delay-300">
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-brown-200/10 to-transparent rounded-bl-full"></div>
               <div className="flex items-start gap-4 mb-6">
-                <div className="text-5xl animate-float">👑</div>
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center text-white shadow-lg animate-float">
+                  <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
                 <h2 className="text-3xl font-bold text-brown-800">Penetapan Hukum Tua Pertama</h2>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
@@ -94,7 +101,8 @@ export default function SejarahPage() {
               </p>
               <div className="bg-gradient-to-r from-cream-100 to-brown-100 rounded-xl p-4 border-l-4 border-brown-700 shadow-md">
                 <p className="text-brown-800 font-semibold flex items-center gap-2">
-                  <span className="text-2xl">💡</span> Catatan Penting
+                  <svg className="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/></svg>
+                  Catatan Penting
                 </p>
                 <p className="text-gray-700 text-sm mt-2">
                   Pada saat dipilih menjadi hukum tua, Theodorus Lengkong sedang menempuh pendidikan di Sekolah Raja di Tondano, menunjukkan komitmen masyarakat untuk memiliki pemimpin yang berpendidikan.
@@ -106,7 +114,9 @@ export default function SejarahPage() {
             <div className="relative bg-gradient-to-br from-white via-cream-50 to-white rounded-2xl shadow-xl p-8 border-l-4 border-cream-700 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden animate-fade-in-up animation-delay-400">
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-cream-300/10 to-transparent rounded-bl-full"></div>
               <div className="flex items-start gap-4 mb-6">
-                <div className="text-5xl animate-bounce-in">🎉</div>
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white shadow-lg animate-bounce-in">
+                  <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+                </div>
                 <h2 className="text-3xl font-bold text-brown-800">Era Modern: Pemekaran Desa (2010)</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
@@ -119,7 +129,10 @@ export default function SejarahPage() {
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-brown-100 via-cream-200 to-brown-100 rounded-xl p-6 text-center shadow-lg border-2 border-brown-300 transform hover:scale-105 transition-transform">
-                  <p className="text-5xl font-bold text-brown-700 mb-2">📅 28 April 2010</p>
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <svg className="w-8 h-8 text-brown-700" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+                    <p className="text-4xl font-bold text-brown-700">28 April 2010</p>
+                  </div>
                   <p className="text-brown-800 font-semibold">Hari Lahir Desa Minanga Dua</p>
                 </div>
               </div>
@@ -129,7 +142,8 @@ export default function SejarahPage() {
             <div className="relative bg-gradient-to-br from-brown-50 via-cream-100 to-brown-50 rounded-2xl p-8 shadow-xl border-2 border-brown-200 overflow-hidden animate-fade-in-up animation-delay-500">
               <div className="absolute top-0 right-0 w-64 h-64 bg-brown-200/10 rounded-full filter blur-3xl animate-pulse-slow"></div>
               <h2 className="text-3xl font-bold text-brown-800 mb-8 text-center relative z-10 flex items-center justify-center gap-3">
-                <span className="text-4xl">📅</span> Garis Waktu Sejarah Desa
+                <svg className="w-8 h-8 text-brown-700" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+                Garis Waktu Sejarah Desa
               </h2>
               <div className="space-y-6 relative z-10">
                 <div className="flex gap-4">
@@ -138,7 +152,10 @@ export default function SejarahPage() {
                     <div className="w-1 h-20 bg-gradient-to-b from-brown-300 to-brown-200"></div>
                   </div>
                   <div className="pb-8 bg-white/60 backdrop-blur-sm p-4 rounded-lg flex-1 border border-brown-200 hover:shadow-md transition-shadow">
-                    <p className="font-bold text-brown-800 text-lg">🏛️ Abad Sebelumnya</p>
+                    <p className="font-bold text-brown-800 text-lg flex items-center gap-2">
+                      <svg className="w-5 h-5 text-brown-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                      Abad Sebelumnya
+                    </p>
                     <p className="text-gray-700">Datangnya kelompok dari Pemangkean yang bermukim di Sumampu (dipimpin SAWEL)</p>
                   </div>
                 </div>
@@ -148,7 +165,10 @@ export default function SejarahPage() {
                     <div className="w-1 h-20 bg-gradient-to-b from-brown-300 to-brown-200"></div>
                   </div>
                   <div className="pb-8 bg-white/60 backdrop-blur-sm p-4 rounded-lg flex-1 border border-brown-200 hover:shadow-md transition-shadow">
-                    <p className="font-bold text-brown-800 text-lg">🤝 Periode Penyatuan</p>
+                    <p className="font-bold text-brown-800 text-lg flex items-center gap-2">
+                      <svg className="w-5 h-5 text-brown-600" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c1.38 0 2.49-1.12 2.49-2.5S17.88 7 16.5 7C15.12 7 14 8.12 14 9.5s1.12 2.5 2.5 2.5zM9 11c1.66 0 2.99-1.34 2.99-3S10.66 5 9 5C7.34 5 6 6.34 6 8s1.34 3 3 3zm7.5 3c-1.83 0-5.5.92-5.5 2.75V19h11v-2.25c0-1.83-3.67-2.75-5.5-2.75zM9 13c-2.33 0-7 1.17-7 3.5V19h7v-2.25c0-.85.33-2.34 2.37-3.47C10.5 13.1 9.66 13 9 13z"/></svg>
+                      Periode Penyatuan
+                    </p>
                     <p className="text-gray-700">Bergabungnya kelompok dari Lisung dengan kelompok Sumampu di bawah kepemimpinan THEODORUS LENGKONG</p>
                   </div>
                 </div>
@@ -158,7 +178,10 @@ export default function SejarahPage() {
                     <div className="w-1 h-20 bg-gradient-to-b from-brown-300 to-brown-200"></div>
                   </div>
                   <div className="pb-8 bg-white/60 backdrop-blur-sm p-4 rounded-lg flex-1 border border-brown-200 hover:shadow-md transition-shadow">
-                    <p className="font-bold text-brown-800 text-lg">✍️ Pencetakan Nama</p>
+                    <p className="font-bold text-brown-800 text-lg flex items-center gap-2">
+                      <svg className="w-5 h-5 text-brown-600" fill="currentColor" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                      Pencetakan Nama
+                    </p>
                     <p className="text-gray-700">Nama "Minanga" ditetapkan berdasarkan pernyataan MOTUPA tentang muara sungai yang terbuka</p>
                   </div>
                 </div>
@@ -167,7 +190,10 @@ export default function SejarahPage() {
                     <div className="w-5 h-5 bg-gradient-to-br from-brown-700 to-brown-600 rounded-full shadow-lg"></div>
                   </div>
                   <div className="bg-white/60 backdrop-blur-sm p-4 rounded-lg flex-1 border border-brown-200 hover:shadow-md transition-shadow">
-                    <p className="font-bold text-brown-800 text-lg">🎉 28 April 2010</p>
+                    <p className="font-bold text-brown-800 text-lg flex items-center gap-2">
+                      <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+                      28 April 2010
+                    </p>
                     <p className="text-gray-700">Desa Minanga Dua secara resmi menjadi desa tersendiri melalui pemekaran</p>
                   </div>
                 </div>
@@ -182,7 +208,10 @@ export default function SejarahPage() {
               </div>
               <div className="relative z-10">
                 <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                  <span className="text-4xl">🏛️</span> Warisan Sejarah
+                  <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/></svg>
+                  </div>
+                  Warisan Sejarah
                 </h2>
                 <p className="text-cream-200 text-lg leading-relaxed">
                   Sejarah Desa Minanga Dua mencerminkan nilai-nilai luhur masyarakat yang mengedepankan persatuan, kesepakatan bersama, dan kebijaksanaan dalam memimpin. 

@@ -115,7 +115,7 @@ export default function PetaPage() {
   ];
 
   const statCards: StatCard[] = [
-    { title: 'Luas Wilayah', value: '1,47 km²', icon: '📍', color: 'from-teal-500 to-cyan-600' },
+    // { title: 'Luas Wilayah', value: '1,47 km²', icon: '📍', color: 'from-teal-500 to-cyan-600' },
     { title: 'Jumlah Penduduk', value: '671 Jiwa', icon: '👥', color: 'from-blue-500 to-indigo-600' },
     { title: 'Ketinggian', value: '±15 mdpl', icon: '⛰️', color: 'from-green-500 to-emerald-600' },
     { title: 'Tipe Desa', value: 'Pesisir', icon: '🌊', color: 'from-orange-500 to-amber-600' },
@@ -124,20 +124,28 @@ export default function PetaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cream-50 via-white to-orange-50/30">
       {/* Header */}
-      <section className="bg-gradient-to-br from-teal-600 via-cyan-700 to-blue-800 text-white py-16 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-teal-600 via-cyan-700 to-blue-800 text-white py-20 relative overflow-hidden min-h-[50vh] flex items-center">
+        {/* Background Image */}
+        <Image
+          src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1920&q=80"
+          alt="Map background"
+          fill
+          className="object-cover opacity-30"
+          priority
+        />
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 right-0 w-72 h-72 bg-orange-400 rounded-full filter blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-300 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-300 rounded-full filter blur-3xl animate-float"></div>
         </div>
         <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
         }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="inline-block mb-4">
+          <div className="inline-block mb-4 animate-fade-in-down">
             <span className="bg-white/20 text-white px-6 py-2 rounded-full text-sm font-semibold border border-white/30 backdrop-blur-sm shadow-lg">🗺️ Peta Interaktif</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">Peta Desa Minanga Dua</h1>
-          <p className="text-white/90 text-lg drop-shadow-md">Jelajahi lokasi penting dan fitur geografis desa</p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg animate-fade-in-up">Peta Desa Minanga Dua</h1>
+          <p className="text-white/90 text-lg drop-shadow-md animate-fade-in-up animation-delay-200">Jelajahi lokasi penting dan fitur geografis desa</p>
         </div>
       </section>
 
@@ -146,7 +154,7 @@ export default function PetaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Map Section */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 animate-fade-in-left">
               <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-cream-200 hover:border-orange-300 transition-all hover:shadow-2xl">
                 {/* Map Container */}
                 <div className="relative bg-gray-100 overflow-hidden group">
@@ -154,7 +162,7 @@ export default function PetaPage() {
                   {!imageError ? (
                     <div className="relative w-full">
                       <Image
-                        src="/peta.png"
+                        src="/petabaru.png"
                         alt="Peta Desa Minanga Dua"
                         width={1200}
                         height={900}
@@ -174,11 +182,11 @@ export default function PetaPage() {
                   )}
 
                   {/* Info Badge */}
-                  <div className="absolute top-4 left-4 bg-gradient-to-r from-cream-100/95 via-white/95 to-orange-50/95 backdrop-blur-sm px-4 py-2 rounded-xl shadow-xl border-2 border-orange-200 hover:scale-105 transition-transform">
+                  {/* <div className="absolute top-4 left-4 bg-gradient-to-r from-cream-100/95 via-white/95 to-orange-50/95 backdrop-blur-sm px-4 py-2 rounded-xl shadow-xl border-2 border-orange-200 hover:scale-105 transition-transform">
                     <p className="text-sm font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent flex items-center gap-2">
                       <span>📍</span> Luas: 1,47 km² • Desa Pesisir
                     </p>
-                  </div>
+                  </div> */}
 
                   {/* Legend Toggle */}
                   {/* <button
@@ -217,10 +225,10 @@ export default function PetaPage() {
             </div>
 
             {/* Features List Section */}
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 animate-fade-in-right">
               <div className="bg-white rounded-2xl shadow-xl p-6 sticky top-24 h-fit border-2 border-cream-200">
                 <h2 className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent mb-4 flex items-center gap-2">
-                  <span className="text-3xl">📍</span> Lokasi & Fasilitas
+                  <span className="text-3xl animate-float">📍</span> Lokasi & Fasilitas
                 </h2>
                 <div className="space-y-3 max-h-96 overflow-y-auto pr-2 custom-scrollbar">
                   {mapFeatures.map((feature) => (
@@ -298,10 +306,10 @@ export default function PetaPage() {
             {statCards.map((stat, idx) => (
               <div
                 key={idx}
-                className={`bg-gradient-to-br ${stat.color} text-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-white/20 overflow-hidden group relative`}
+                className={`bg-gradient-to-br ${stat.color} text-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-white/20 overflow-hidden group relative animate-fade-in-up animation-delay-${(idx + 1) * 100}`}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div className="text-5xl mb-3 relative z-10 transform group-hover:scale-110 transition-transform drop-shadow-lg">{stat.icon}</div>
+                <div className="text-5xl mb-3 relative z-10 transform group-hover:scale-110 transition-transform drop-shadow-lg animate-float">{stat.icon}</div>
                 <h3 className="font-bold text-lg mb-2 opacity-90 relative z-10">{stat.title}</h3>
                 <p className="text-3xl font-bold relative z-10 drop-shadow-md">{stat.value}</p>
               </div>
@@ -310,30 +318,30 @@ export default function PetaPage() {
 
           {/* Info Cards dengan Ilustrasi */}
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative bg-gradient-to-br from-teal-100 via-cyan-100 to-teal-100 rounded-2xl p-6 text-teal-900 shadow-xl hover:shadow-2xl transition-all overflow-hidden group border-2 border-teal-200">
+            <div className="relative bg-gradient-to-br from-teal-100 via-cyan-100 to-teal-100 rounded-2xl p-6 text-teal-900 shadow-xl hover:shadow-2xl transition-all overflow-hidden group border-2 border-teal-200 animate-fade-in-up">
               <div className="absolute top-0 right-0 w-24 h-24 bg-teal-300/30 rounded-full filter blur-2xl group-hover:scale-150 transition-transform"></div>
-              <p className="text-5xl mb-3 relative z-10 drop-shadow-md">📊</p>
+              <p className="text-5xl mb-3 relative z-10 drop-shadow-md animate-bounce-in">📊</p>
               <h3 className="font-bold text-lg mb-2 relative z-10">Statistik Wilayah</h3>
               <p className="text-sm relative z-10 font-medium">Luas 1,47 km² dengan populasi 671 jiwa, terletak di ketinggian ±15 meter dari permukaan laut</p>
             </div>
-            <div className="relative bg-gradient-to-br from-orange-100 via-amber-100 to-orange-100 rounded-2xl p-6 text-orange-900 shadow-xl hover:shadow-2xl transition-all overflow-hidden group border-2 border-orange-200">
+            <div className="relative bg-gradient-to-br from-orange-100 via-amber-100 to-orange-100 rounded-2xl p-6 text-orange-900 shadow-xl hover:shadow-2xl transition-all overflow-hidden group border-2 border-orange-200 animate-fade-in-up animation-delay-100">
               <div className="absolute top-0 right-0 w-24 h-24 bg-orange-300/30 rounded-full filter blur-2xl group-hover:scale-150 transition-transform"></div>
-              <p className="text-5xl mb-3 relative z-10 drop-shadow-md">🌊</p>
+              <p className="text-5xl mb-3 relative z-10 drop-shadow-md animate-wave">🌊</p>
               <h3 className="font-bold text-lg mb-2 relative z-10">Desa Pesisir</h3>
               <p className="text-sm relative z-10 font-medium">Memiliki akses ke pantai dengan ekosistem mangrove yang signifikan sebagai aset alam berharga</p>
             </div>
-            <div className="relative bg-gradient-to-br from-blue-100 via-indigo-100 to-blue-100 rounded-2xl p-6 text-blue-900 shadow-xl hover:shadow-2xl transition-all overflow-hidden group border-2 border-blue-200">
+            <div className="relative bg-gradient-to-br from-blue-100 via-indigo-100 to-blue-100 rounded-2xl p-6 text-blue-900 shadow-xl hover:shadow-2xl transition-all overflow-hidden group border-2 border-blue-200 animate-fade-in-up animation-delay-200">
               <div className="absolute top-0 right-0 w-24 h-24 bg-blue-300/30 rounded-full filter blur-2xl group-hover:scale-150 transition-transform"></div>
-              <p className="text-5xl mb-3 relative z-10 drop-shadow-md">🛣️</p>
+              <p className="text-5xl mb-3 relative z-10 drop-shadow-md animate-float">🛣️</p>
               <h3 className="font-bold text-lg mb-2 relative z-10">Infrastruktur</h3>
               <p className="text-sm relative z-10 font-medium">Sarana transportasi dan jalan yang memadai menghubungkan berbagai bagian desa dengan baik</p>
             </div>
           </div>
 
           {/* Landmarks Section */}
-          <div className="mt-16 bg-gradient-to-br from-cream-100 via-orange-50 to-cream-100 rounded-2xl p-8 shadow-xl border-2 border-orange-200">
+          <div className="mt-16 bg-gradient-to-br from-cream-100 via-orange-50 to-cream-100 rounded-2xl p-8 shadow-xl border-2 border-orange-200 animate-fade-in-up">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent mb-6 flex items-center gap-3">
-              <span className="text-4xl">🏛️</span> Landmark Penting Desa
+              <span className="text-4xl animate-float">🏛️</span> Landmark Penting Desa
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {mapFeatures.filter(f => f.type === 'landmark').map((landmark) => (
@@ -353,9 +361,9 @@ export default function PetaPage() {
           </div>
 
           {/* Facilities Section */}
-          <div className="mt-8 bg-gradient-to-br from-teal-100 via-cyan-50 to-teal-100 rounded-2xl p-8 shadow-xl border-2 border-teal-200">
+          <div className="mt-8 bg-gradient-to-br from-teal-100 via-cyan-50 to-teal-100 rounded-2xl p-8 shadow-xl border-2 border-teal-200 animate-fade-in-up animation-delay-100">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent mb-6 flex items-center gap-3">
-              <span className="text-4xl">🏫</span> Fasilitas Umum
+              <span className="text-4xl animate-bounce-in">🏫</span> Fasilitas Umum
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {mapFeatures.filter(f => f.type === 'facility' || f.type === 'infrastructure').map((facility) => (
@@ -375,9 +383,9 @@ export default function PetaPage() {
           </div>
 
           {/* Natural Resources Section */}
-          <div className="mt-8 bg-gradient-to-br from-green-100 via-emerald-50 to-green-100 rounded-2xl p-8 shadow-xl border-2 border-green-200">
+          <div className="mt-8 bg-gradient-to-br from-green-100 via-emerald-50 to-green-100 rounded-2xl p-8 shadow-xl border-2 border-green-200 animate-fade-in-up animation-delay-200">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-6 flex items-center gap-3">
-              <span className="text-4xl">🌿</span> Sumber Daya Alam
+              <span className="text-4xl animate-wave">🌿</span> Sumber Daya Alam
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {mapFeatures.filter(f => f.type === 'natural').map((natural) => (

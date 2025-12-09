@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface PotensiItem {
   title: string;
@@ -58,21 +59,29 @@ export default function ProfilPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-teal-600 via-cyan-700 to-blue-800 text-white py-16 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-teal-600 via-cyan-700 to-blue-800 text-white py-20 relative overflow-hidden min-h-[50vh] flex items-center">
+        {/* Background Image */}
+        <Image
+          src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&q=80"
+          alt="Village aerial view"
+          fill
+          className="object-cover opacity-30"
+          priority
+        />
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-72 h-72 bg-orange-400 rounded-full filter blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-teal-300 rounded-full filter blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-300 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-teal-300 rounded-full filter blur-3xl animate-float"></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-300 rounded-full filter blur-3xl animate-pulse"></div>
         </div>
         <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
         }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="inline-block mb-4">
+          <div className="inline-block mb-4 animate-fade-in-down">
             <span className="bg-white/20 text-white px-6 py-2 rounded-full text-sm font-semibold border border-white/30 backdrop-blur-sm shadow-lg">📊 Data & Statistik</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">Profil Desa Minanga Dua</h1>
-          <p className="text-white/90 text-lg drop-shadow-md">Informasi lengkap tentang desa kami</p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg animate-fade-in-up">Profil Desa Minanga Dua</h1>
+          <p className="text-white/90 text-lg drop-shadow-md animate-fade-in-up animation-delay-200">Informasi lengkap tentang desa kami</p>
         </div>
       </section>
 
@@ -81,10 +90,10 @@ export default function ProfilPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {/* Lokasi dan Administrasi */}
-            <div className="relative bg-white rounded-2xl shadow-lg p-8 border-l-4 border-teal-600 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group">
+            <div className="relative bg-white rounded-2xl shadow-lg p-8 border-l-4 border-teal-600 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group animate-fade-in-left">
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-teal-200/20 to-transparent rounded-bl-full group-hover:scale-110 transition-transform"></div>
               <h2 className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent mb-6 flex items-center gap-2 relative z-10">
-                <span className="text-3xl">📍</span> Lokasi & Administrasi
+                <span className="text-3xl animate-float">📍</span> Lokasi & Administrasi
               </h2>
               <div className="space-y-4 relative z-10">
                 <div className="bg-gradient-to-r from-teal-50 to-cyan-50 p-4 rounded-lg hover:from-teal-100 hover:to-cyan-100 transition-all transform hover:scale-105 border border-teal-100">
@@ -107,10 +116,10 @@ export default function ProfilPage() {
             </div>
 
             {/* Geografis */}
-            <div className="relative bg-white rounded-2xl shadow-lg p-8 border-l-4 border-orange-600 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group">
+            <div className="relative bg-white rounded-2xl shadow-lg p-8 border-l-4 border-orange-600 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group animate-fade-in-right">
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-orange-200/20 to-transparent rounded-bl-full group-hover:scale-110 transition-transform"></div>
               <h2 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent mb-6 flex items-center gap-2 relative z-10">
-                <span className="text-3xl">🌊</span> Geografis & Wilayah
+                <span className="text-3xl animate-wave">🌊</span> Geografis & Wilayah
               </h2>
               <div className="space-y-4 relative z-10">
                 <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-4 rounded-lg hover:from-orange-100 hover:to-amber-100 transition-all transform hover:scale-105 border border-orange-100">
@@ -134,11 +143,11 @@ export default function ProfilPage() {
           </div>
 
           {/* Demografi Section */}
-          <div className="relative bg-white rounded-2xl shadow-xl p-8 mb-16 border-2 border-gray-100 overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-cyan-200/20 to-transparent rounded-full filter blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-orange-200/20 to-transparent rounded-full filter blur-3xl"></div>
+          <div className="relative bg-white rounded-2xl shadow-xl p-8 mb-16 border-2 border-gray-100 overflow-hidden animate-fade-in-up">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-cyan-200/20 to-transparent rounded-full filter blur-3xl animate-pulse-slow"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-orange-200/20 to-transparent rounded-full filter blur-3xl animate-pulse-slow"></div>
             <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent mb-8 flex items-center gap-2 relative z-10">
-              <span className="text-3xl">👥</span> Demografi Penduduk
+              <span className="text-3xl animate-float">👥</span> Demografi Penduduk
             </h2>
 
             {/* Total Penduduk */}
@@ -196,10 +205,10 @@ export default function ProfilPage() {
           </div>
 
           {/* Fasilitas Pendidikan */}
-          <div className="relative bg-white rounded-2xl shadow-lg p-8 mb-16 border-l-4 border-cyan-600 overflow-hidden hover:shadow-2xl transition-all group">
+          <div className="relative bg-white rounded-2xl shadow-lg p-8 mb-16 border-l-4 border-cyan-600 overflow-hidden hover:shadow-2xl transition-all group animate-fade-in-up animation-delay-100">
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-cyan-200/20 to-transparent rounded-bl-full group-hover:scale-110 transition-transform"></div>
             <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent mb-6 flex items-center gap-2 relative z-10">
-              <span className="text-3xl">🎓</span> Fasilitas Pendidikan
+              <span className="text-3xl animate-bounce-in">🎓</span> Fasilitas Pendidikan
             </h2>
             <div className="relative bg-gradient-to-br from-cyan-50 via-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-cyan-200 shadow-md hover:shadow-lg transition-shadow z-10">
               <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-700 to-blue-700 bg-clip-text text-transparent mb-3 flex items-center gap-2">
@@ -214,11 +223,11 @@ export default function ProfilPage() {
           </div>
 
           {/* Potensi Desa */}
-          <div className="relative bg-gradient-to-br from-orange-50 via-amber-50 to-orange-50 rounded-2xl p-8 mb-16 shadow-xl border-2 border-orange-200 overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-orange-300/20 to-transparent rounded-full filter blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-amber-300/20 to-transparent rounded-full filter blur-3xl"></div>
+          <div className="relative bg-gradient-to-br from-orange-50 via-amber-50 to-orange-50 rounded-2xl p-8 mb-16 shadow-xl border-2 border-orange-200 overflow-hidden animate-fade-in-up animation-delay-200">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-orange-300/20 to-transparent rounded-full filter blur-3xl animate-float"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-amber-300/20 to-transparent rounded-full filter blur-3xl animate-pulse-slow"></div>
             <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent mb-4 flex items-center gap-2 relative z-10">
-              <span className="text-3xl">💡</span> Potensi Desa
+              <span className="text-3xl animate-glow">💡</span> Potensi Desa
             </h2>
             <p className="text-gray-700 text-lg mb-8 leading-relaxed relative z-10 font-medium">
               Desa Minanga Dua memiliki berbagai potensi yang beragam. Meskipun desa ini tergolong tertinggal dibandingkan dengan desa lain di Kecamatan Pusomaen, 
@@ -263,11 +272,11 @@ export default function ProfilPage() {
           </div>
 
           {/* Pembangunan dan Tata Kelola */}
-          <div className="relative bg-gradient-to-br from-teal-600 via-cyan-700 to-blue-800 text-white rounded-2xl p-8 shadow-2xl overflow-hidden group hover:shadow-3xl transition-all">
+          <div className="relative bg-gradient-to-br from-teal-600 via-cyan-700 to-blue-800 text-white rounded-2xl p-8 shadow-2xl overflow-hidden group hover:shadow-3xl transition-all animate-fade-in-up animation-delay-300">
             <div className="absolute inset-0 opacity-20">
-              <div className="absolute top-0 left-0 w-48 h-48 bg-orange-400 rounded-full filter blur-3xl group-hover:scale-110 transition-transform"></div>
-              <div className="absolute bottom-0 right-0 w-64 h-64 bg-teal-300 rounded-full filter blur-3xl group-hover:scale-110 transition-transform"></div>
-              <div className="absolute top-1/2 left-1/2 w-48 h-48 bg-cyan-300 rounded-full filter blur-3xl"></div>
+              <div className="absolute top-0 left-0 w-48 h-48 bg-orange-400 rounded-full filter blur-3xl group-hover:scale-110 transition-transform animate-pulse"></div>
+              <div className="absolute bottom-0 right-0 w-64 h-64 bg-teal-300 rounded-full filter blur-3xl group-hover:scale-110 transition-transform animate-float"></div>
+              <div className="absolute top-1/2 left-1/2 w-48 h-48 bg-cyan-300 rounded-full filter blur-3xl animate-pulse-slow"></div>
             </div>
             <div className="absolute inset-0 opacity-10" style={{
               backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',

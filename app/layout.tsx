@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "KODE_VERIFIKASI_GOOGLE", // Ganti setelah daftar di Google Search Console
+    google: "googleaffeb7ad59a778a4.html", // Ganti setelah daftar di Google Search Console
   },
 };
 

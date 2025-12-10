@@ -61,6 +61,9 @@ export default function Footer() {
           <p className="text-center text-gray-400 text-sm flex items-center justify-center gap-2">
             <span>©</span> 2024 Desa Minanga Dua. Semua hak cipta dilindungi.
           </p>
+          <p className="text-center text-gray-400 text-xs mt-2">
+            KKT-145 UNSRAT Tahun 2025
+          </p>
         </div>
       </div>
     </footer>

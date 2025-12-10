@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   description: "Website resmi Desa Minanga Dua, desa pesisir di Kecamatan Pusomaen, Kabupaten Minahasa Tenggara, Sulawesi Utara. Informasi sejarah, profil desa, dan peta wilayah.",
   keywords: ["Minanga", "Desa Minanga", "Minanga Dua", "Pusomaen", "Minahasa Tenggara", "Sulawesi Utara", "desa pesisir", "minangadua"],
   authors: [{ name: "KKT-145 UNSRAT 2025" }],
+  icons: {
+    icon: "/logo_desa.jpg",
+    shortcut: "/logo_desa.jpg",
+    apple: "/logo_desa.jpg",
+  },
   openGraph: {
     title: "Desa Minanga Dua - Kecamatan Pusomaen",
     description: "Website resmi Desa Minanga Dua, desa pesisir di Kecamatan Pusomaen, Kabupaten Minahasa Tenggara, Sulawesi Utara.",

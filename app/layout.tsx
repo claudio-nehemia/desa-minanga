@@ -15,16 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Desa Minanga Dua - Kecamatan Pusomaen, Minahasa Tenggara",
-    template: "%s | Desa Minanga Dua",
-  },
+  title: "Desa Minanga Dua - Kecamatan Pusomaen, Minahasa Tenggara",
   description: "Website resmi Desa Minanga Dua, desa pesisir di Kecamatan Pusomaen, Kabupaten Minahasa Tenggara, Sulawesi Utara. Informasi sejarah, profil desa, dan peta wilayah.",
-  keywords: ["Minanga", "Desa Minanga", "Minanga Dua", "Pusomaen", "Minahasa Tenggara", "Sulawesi Utara", "desa pesisir", "minangadua", "desa minanga dua"],
+  keywords: ["Minanga", "Desa Minanga", "Minanga Dua", "Pusomaen", "Minahasa Tenggara", "Sulawesi Utara", "desa pesisir", "minangadua"],
   authors: [{ name: "KKT-145 UNSRAT 2025" }],
-  creator: "KKT-145 UNSRAT 2025",
-  publisher: "Desa Minanga Dua",
-  metadataBase: new URL("https://minangadua.com"),
   openGraph: {
     title: "Desa Minanga Dua - Kecamatan Pusomaen",
     description: "Website resmi Desa Minanga Dua, desa pesisir di Kecamatan Pusomaen, Kabupaten Minahasa Tenggara, Sulawesi Utara.",
@@ -49,8 +43,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: "https://minangadua.com",
+  verification: {
+    google: "KODE_VERIFIKASI_GOOGLE", // Ganti setelah daftar di Google Search Console
   },
 };
 

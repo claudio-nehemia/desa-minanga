@@ -31,7 +31,7 @@ export default function PetaPage() {
       type: 'landmark',
       description: 'Gereja dengan arsitektur yang indah, menjadi landmark utama desa',
       icon: 'church',
-      coordinates: 'Jaga 1',
+      coordinates: 'Jaga 3',
     },
     {
       id: 'gmim',
@@ -39,7 +39,7 @@ export default function PetaPage() {
       type: 'landmark',
       description: 'Gereja yang melayani komunitas lokal dengan berbagai kegiatan sosial',
       icon: 'church',
-      coordinates: 'Jaga 2',
+      coordinates: 'Jaga 3',
     },
     {
       id: 'sdgmim',
@@ -63,7 +63,7 @@ export default function PetaPage() {
       type: 'landmark',
       description: 'Tempat ibadah yang melayani komunitas muslim desa',
       icon: 'mosque',
-      coordinates: 'Jaga 2',
+      coordinates: 'Jaga 4',
     },
     {
       id: 'gpdi-eben',
@@ -71,7 +71,7 @@ export default function PetaPage() {
       type: 'landmark',
       description: 'Gereja Pentakosta untuk pelayanan spiritual masyarakat',
       icon: 'church',
-      coordinates: 'Jaga 3',
+      coordinates: 'Jaga 4',
     },
     {
       id: 'jalan-pekuburan',
@@ -79,7 +79,7 @@ export default function PetaPage() {
       type: 'infrastructure',
       description: 'Jalan utama yang menghubungkan berbagai bagian desa',
       icon: 'road',
-      coordinates: 'Selatan Desa',
+      coordinates: 'Barat Desa',
     },
     {
       id: 'pantai',
@@ -87,7 +87,7 @@ export default function PetaPage() {
       type: 'natural',
       description: 'Pantai pesisir dengan potensi ekosistem mangrove yang kaya',
       icon: 'beach',
-      coordinates: 'Timur Desa',
+      coordinates: 'Selatan Desa',
     },
     {
       id: 'mangrove',
@@ -95,7 +95,7 @@ export default function PetaPage() {
       type: 'natural',
       description: 'Area mangrove yang menjadi habitat penting dan sumber daya alam',
       icon: 'tree',
-      coordinates: 'Pesisir Timur',
+      coordinates: 'Pesisir Selatan',
     },
     {
       id: 'lapangan',
@@ -103,7 +103,7 @@ export default function PetaPage() {
       type: 'infrastructure',
       description: 'Ruang terbuka untuk olahraga dan kegiatan komunitas',
       icon: 'sports',
-      coordinates: 'Jaga 1',
+      coordinates: 'Jaga 4',
     },
   ];
 
